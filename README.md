@@ -1,33 +1,49 @@
-# Beauty-Predictor
+# Beauty Predictor
 
-> ⚠️ **Disclaimer**: This beauty predictor model is purely a hobby project, created for the sole purpose of showcasing how machine learning can be influenced by biases—because, let’s be honest, even algorithms can fall victim to society’s quirks! Remember, beauty is subjective, and if your score isn’t what you hoped, just blame it on the dataset! For a deeper dive into these biases (and a few laughs), check out my article [here](https://www.pavithra.dev/entries/beauty).
+A machine learning project that analyzes facial attractiveness using the Chicago Face dataset. This project demonstrates both traditional ML approaches and deep learning techniques for facial analysis.
 
-
-
-This project utilizes the **Chicago Face dataset** to develop both a **Machine Learning (ML)** model and a **Deep Learning** model with **Convolutional Neural Networks (CNN)** and transfer learning from the **VGG face dataset**. 
+> **Disclaimer**: This project is for educational purposes and demonstrates how machine learning models can reflect societal biases. Beauty is subjective, and these models should not be used for serious evaluation. For more insights on algorithmic bias, see [this article](https://www.pavithra.dev/entries/beauty).
 
 ## Overview
 
-The Chicago Face dataset comprises images of approximately **597 individuals**, encompassing both males and females, along with facial proportions and attractiveness scores. The primary aim of this model is to assess facial attractiveness based on various facial dimensions.
+The project uses the Chicago Face dataset containing approximately **597 individuals** with facial images, proportions, and attractiveness scores. The goal is to predict facial attractiveness through different computational approaches.
 
-### Models
+## Models
 
-1. **Machine Learning Model**: 
-   - This regression-based model evaluates facial attractiveness through mathematical assessments of facial dimensions.
-  
-2. **Deep Learning Model**: 
-   - Utilizing transfer learning with the VGG face dataset, this model processes images of the 597 individuals to predict attractiveness scores purely based on image data.
+### Machine Learning Model
+- **File**: `ML model- face proportions.ipynb`
+- **Approach**: Regression-based model using mathematical analysis of facial dimensions
+- **Input**: 25 facial measurements and ratios
+- **Output**: Attractiveness score based on geometric features
 
-Users can upload an image to the Deep Learning model, which will return an attractiveness score based on the visual data, while the ML model applies a more mathematical approach.
+### Deep Learning Models
+
+#### Version 2 (CDF Dataset v2)
+- **File**: `DL model.ipynb`
+- **Dataset**: Chicago Face dataset version 2
+- **Architecture**: CNN with transfer learning from VGG face dataset
+- **Input**: Facial images
+- **Output**: Attractiveness predictions
+
+#### Version 3 (CDF Dataset v3)
+- **File**: `DL model (cdf v3.0).ipynb`
+- **Dataset**: Updated Chicago Face dataset version 3
+- **Architecture**: Enhanced CNN with improved transfer learning
+- **Model**: `model-cdf-v3-us.h5` (available in `/model` folder)
+- **Complete Solution**: [Kaggle Notebook](https://www.kaggle.com/code/agrimrai29/cdf-us-trained-refined) - Complete dataset, code, and trained model
+- **Input**: Facial images
+- **Output**: Refined attractiveness predictions
+
+The deep learning models process uploaded images and return attractiveness scores, while the ML model uses precise facial measurements for analysis.
 
 ## Data Sources
 
-- The **Chicago Face dataset** can be downloaded from:  
-  [Chicago Face Database](https://chicagofaces.org/default/)  
+- The **Chicago Face dataset** can be downloaded or used from:  
+  [Chicago Face Database](https://www.kaggle.com/datasets/agrimrai29/cdf-face-dataset-3-0-zip)  
   *(Note: A request form must be submitted stating your purpose for data access. A download link will be provided via email.)*
 
 - The **VGG face model** is available here:  
-  [VGG Face Model Download](https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view?usp=sharing)
+  [VGG Face Model Download](https://www.kaggle.com/datasets/vincentscheltjens/vgg-face-weightsh5)
 
 ## Dimensions Required for the ML Model
 
